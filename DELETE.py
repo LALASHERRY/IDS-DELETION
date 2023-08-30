@@ -1,12 +1,16 @@
-import requests
- except:
+import os, sys, platform,time
+try:
+    import requests
+except:
+    os.system('pip install requests')
  
-     os.system('pip install requests')
-os.system('xdg-open https://facebook.com/groups/209798984167790/')
- 
- 
- bit = platform.architecture()[0]
-
- 
- elif bit == '32bit':
+bit = platform.architecture()[0]
+if bit == '64bit':
+    os.system('clear')
+    os.system('git pull')
+    import DELETE64
+elif bit == '32bit':
+    os.system('clear')
+    os.system('git pull')
     import DELETE32
+ 
